@@ -371,7 +371,7 @@ $(function() {
 		type: 'info',
 		z_index: 2031,
 		placement: {
-			align: 'center'
+			align: 'right'
 		},
 	})
 })

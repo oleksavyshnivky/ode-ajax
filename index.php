@@ -56,7 +56,7 @@ if (defined('AJAX') and AJAX) {
 		'url'	=>	$_SERVER['REQUEST_URI'],
 		'title'	=>	$title,
 		// Div-обгортка потрібна для JS-парсера, якщо для показу користувачу потрібен не весь цей блок
-		'html'	=>	'<div class="animated fadeIn" style="animation-duration: 0.5s;">'.$unplannedContent.$plannedContent.'</div>',
+		'html'	=>	'<div class="animated bounceInRight" style="animation-duration: 0.5s;">'.$unplannedContent.$plannedContent.'</div>',
 		'alerts'=>	$GLOBALS['msgbox']
 	];
 	header('Content-Type: application/json');

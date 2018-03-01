@@ -1,6 +1,5 @@
 <?php
 define('HTTP_ASSETS', '/solutions/ode-ajax/assets');
-define('HTTP_VENDOR', HTTP_ASSETS . '/vendor');
 ?><!DOCTYPE html>
 <html lang="uk">
 <head>
@@ -17,14 +16,14 @@ define('HTTP_VENDOR', HTTP_ASSETS . '/vendor');
 	<meta name="author" content="ODE">
 	<meta name="description" content="AJAX-переходи на ODE-сайтах">
 	
-	<link rel="icon" href="<?= HTTP_VENDOR ?>/favicon/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="<?= HTTP_ASSETS ?>/favicon/favicon.ico" type="image/x-icon">
 
-	<link rel="stylesheet" href="<?= HTTP_VENDOR ?>/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-	<link rel="stylesheet" href="<?= HTTP_VENDOR ?>/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/black/pace-theme-minimal.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	<link rel="stylesheet" href="<?= HTTP_ASSETS ?>/css/app.css">
-	<link rel="stylesheet" href="<?= HTTP_ASSETS ?>/css/pace-theme.css">
-	<link rel="stylesheet" href="<?= HTTP_ASSETS ?>/css/animate.min.css">
 </head>
 
 <body>
@@ -62,22 +61,22 @@ define('HTTP_VENDOR', HTTP_ASSETS . '/vendor');
 	<h1>Використані файли</h1>
 	<ul>
 		<li>
-			<a href="<?= HTTP_VENDOR ?>/jquery/jquery.min.js" target="_blank">jquery.min.js</a>
+			jquery.min.js
 		</li>
 		<li>
 			<a href="<?= HTTP_ASSETS ?>/js/jquery.ode-ajax.js" target="_blank">jquery.ode-ajax.js</a> — мій ajax-файл (див. опис у ньому)
 		</li>
 		<li>
-			<a href="<?= HTTP_VENDOR ?>/misc/js/jquery.history.45.js" target="_blank">jquery.history.45.js</a> — для переходів вперед/назад
+			<a href="<?= HTTP_ASSETS ?>/js/jquery.history.45.js" target="_blank">jquery.history.45.js</a> — для переходів вперед/назад (з моїми правками, але якими саме, я успішно забув — <a href="https://github.com/yeikos/jquery.history" target="_blank">Оригінал</a>)
 		</li>
 	</ul>
 	<h1>Додатково</h1>
 	<ul>
 		<li>
-			<a href="<?= HTTP_VENDOR ?>/misc/js/bootstrap-notify.min.js" target="_blank">bootstrap-notify.min.js</a> — для показу Bootstrap alerts (з моїми поправками під Bootstrap 4)
+			<a href="<?= HTTP_ASSETS ?>/js/bootstrap-notify.min.js" target="_blank">bootstrap-notify.min.js</a> — для показу Bootstrap alerts (з моїми поправками під Bootstrap 4 — <a href="http://bootstrap-notify.remabledesigns.com/" target="_blank">Оригінал</a>)
 		</li>
 		<li>
-			<a href="http://github.hubspot.com/pace/" target="_blank">http://github.hubspot.com/pace/</a> — pace.js і pace.css, здається, звідси (для синього індикатора завантаження угорі сторінки)
+			<a href="http://github.hubspot.com/pace/" target="_blank">http://github.hubspot.com/pace/</a> — pace.js і pace.css, здається, звідси (для  індикатора завантаження угорі сторінки)
 		</li>
 		<li>
 			<a href="<?= HTTP_ASSETS ?>/css/ajaxblock.css" target="_blank">ajaxblock.css</a> — для індикатора, який мигає у блоці, куди завантажиться результат (у HTML-коді, який при першому запиті завантажується, повинен бути блок <code><?= html_escape('<div id="ajaxloader" hidden><div class="ajax-block"><div class="spinner"></div></div></div>') ?></code>)
@@ -88,14 +87,17 @@ define('HTTP_VENDOR', HTTP_ASSETS . '/vendor');
 <!-- Additional CSS -->
 <link rel="stylesheet" href="<?= HTTP_ASSETS ?>/css/ajaxblock.css">
 <!-- Javascript files-->
-<script src="<?= HTTP_VENDOR ?>/misc/js/pace.min.js"></script>
-<script src="<?= HTTP_VENDOR ?>/jquery/jquery.min.js"></script>
-<script src="<?= HTTP_VENDOR ?>/popper.js/umd/popper.min.js"> </script>
-<script src="<?= HTTP_VENDOR ?>/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 <script src="<?= HTTP_ASSETS ?>/js/jquery.ode-ajax.js"></script>
-<script src="<?= HTTP_ASSETS ?>/js/app.js"></script>
-<script src="<?= HTTP_VENDOR ?>/misc/js/bootstrap-notify.min.js"></script>
-<script src="<?= HTTP_VENDOR ?>/misc/js/jquery.history.45.js"></script>
+<script src="<?= HTTP_ASSETS ?>/js/bootstrap-notify.min.js"></script>
+<script src="<?= HTTP_ASSETS ?>/js/jquery.history.45.js"></script>
 	
 <div id="ajaxloader" hidden>
 	<div class="ajax-block">
